@@ -10,7 +10,7 @@ function DigitalPal(name, pet){
 }
 
 DigitalPal.prototype = {
-    feed : function(){
+    feed(){
         if(this.hungry){
             console.log("That was yummy!");
             this.hungry = false;
@@ -19,7 +19,7 @@ DigitalPal.prototype = {
             console.log("No thanks! I'm full.");
         }
     },
-    sleep : function(){
+    sleep(){
         if(this.spleepy){
             console.log("Zzzzzzzz");
             this.spleepy = false;
@@ -29,7 +29,7 @@ DigitalPal.prototype = {
             console.log("No way! I'm not tired.");
         }
     },
-    play : function(){
+    play(){
         if(this.bored){
             console.log("Yay! Let's play!");
             this.bored = false;
@@ -38,18 +38,18 @@ DigitalPal.prototype = {
             console.log("Not right now. Later?");
         }
     },
-    increaseAge : function(){
+    increaseAge(){
         this.age += 1;
         console.log("Happy Birthday to me! I am "+this.age+" old!");
     },
-    sound : function(){
+    sound(){
         if(this.pet === "dog"){
             console.log("Woof! Woof!");
         }else{
             console.log("Meow! Meow!");
         }
     },
-    goOutside : function(){
+    goOutside(){
         if(!this.outside){
             console.log("Yay! I love the outdoors!");
             this.outside = true;
@@ -58,7 +58,7 @@ DigitalPal.prototype = {
             console.log("We're already outside though...");
         }
     },
-    goInside : function(){
+    goInside(){
         if(this.outside){
             console.log("Do we have to? Fine...");
             this.outside = false;
@@ -67,7 +67,7 @@ DigitalPal.prototype = {
             console.log("I'm already inside...");
         }
     },
-    destroyFurniture : function(){
+    destroyFurniture(){
         if(this.houseCondition <= 0){
             return;
         }
@@ -76,7 +76,7 @@ DigitalPal.prototype = {
         this.bored = false;
         this.sleepy = true;
     },
-    buyNewFurniture : function(){
+    buyNewFurniture(){
         this.houseCondition += 50;
         console.log("Are you sure about that?");
     }
