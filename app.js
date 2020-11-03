@@ -1,4 +1,6 @@
-function DigitalPal(){
+function DigitalPal(name, pet){
+    this.name = name;
+    this.pet = pet;
     this.hungry = false;
     this.spleepy = false;
     this.bored = true;
@@ -40,8 +42,12 @@ DigitalPal.prototype = {
         this.age += 1;
         console.log("Happy Birthday to me! I am "+age+" old!");
     },
-    bark : function(){
-        console.log("Woof! Woof!");
+    sound : function(){
+        if(this.pet === "dog"){
+            console.log("Woof! Woof!");
+        }else{
+            console.log("Meow! Meow!");
+        }
     },
     goOutside : function(){
         if(!this.outside){
@@ -59,9 +65,6 @@ DigitalPal.prototype = {
         }else{
             console.log("I'm already inside...");
         }
-    },
-    meow : function(){
-        console.log("Meow! Meow!");
     },
     destroyFurniture : function(){
         if(this.houseCondition <= 0){
