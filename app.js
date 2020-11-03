@@ -40,7 +40,7 @@ DigitalPal.prototype = {
     },
     increaseAge : function(){
         this.age += 1;
-        console.log("Happy Birthday to me! I am "+age+" old!");
+        console.log("Happy Birthday to me! I am "+this.age+" old!");
     },
     sound : function(){
         if(this.pet === "dog"){
@@ -53,7 +53,7 @@ DigitalPal.prototype = {
         if(!this.outside){
             console.log("Yay! I love the outdoors!");
             this.outside = true;
-            this.bark();
+            this.sound();
         }else{
             console.log("We're already outside though...");
         }
@@ -62,6 +62,7 @@ DigitalPal.prototype = {
         if(this.outside){
             console.log("Do we have to? Fine...");
             this.outside = false;
+            this.hungry = true;
         }else{
             console.log("I'm already inside...");
         }

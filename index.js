@@ -25,8 +25,9 @@ inquirer
     }else {
         pet = new digitalPal(response.petName, "cat");
     }
-
-        play();
+    console.log(`Hi, I'm ${pet.name}`);
+    
+    play();
         
   });
 
@@ -52,10 +53,37 @@ function play(){
     }
   ]).then(function(response) {
     console.log(response.toDo);
-    pet.sound();
-    
+    switch(response.toDo){
+        case "feed" :
+            pet.feed();
+            break;
+        case "sleep" :
+            pet.sleep();
+            break;
+        case "play" :
+            pet.play();
+            break;
+        case "sound" :
+            pet.sound();
+            break;
+        case "goOutside" :
+            pet.goOutside();
+            break;
+        case "goInside" :
+            pet.goInside();
+            break;
+        case "destroyFurniture" :
+            pet.destroyFurniture();
+            break;
+        case "buyNewFurniture" :
+            pet.buyNewFurniture();
+            break;
+    }
+
     if(response.toDo !== "EXIT"){
         play();
+    }else{
+        console.log("Bye, See you soon!!");
     }
   });
 }
