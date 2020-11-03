@@ -1,0 +1,22 @@
+{
+  "name": "tamagotchi",
+  "version": "1.0.0",
+  "description": "# **Instructions**",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/congmul/tamagotchi.git"
+  },
+  "author": "Jehyun Jung",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/congmul/tamagotchi/issues"
+  },
+  "homepage": "https://github.com/congmul/tamagotchi#readme",
+  "dependencies": {
+    "inquirer": "^7.3.3"
+  }
+}
